@@ -1,0 +1,28 @@
+<p>friends works!</p>
+
+<p>
+    {{Friends|json}}
+</p>
+
+<ol>
+    <li *ngFor="let f of Friends"> {{f}} </li>
+</ol>
+
+<div *ngIf = "a>b"> {{a}} is Greater than {{b}}</div>
+
+<table border="1" align="center">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact_No</th>
+        <th>Photo</th>
+    </tr>
+
+    <tr *ngFor= "let i of friend">
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.Contact_No}}</td>
+        <td><img src = {{i.photo}} alt="student error " height=100px  width=100px></td>
+   
+    </tr>
+</table>

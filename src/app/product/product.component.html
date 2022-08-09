@@ -1,0 +1,38 @@
+<p>product works!</p>
+
+<div>
+    <h2> Product Deatils:</h2>
+</div>
+
+<div>
+ 
+    <h3> Product Number : {{product_No}}</h3>
+    <h3> Product Name : {{productname|uppercase}}</h3>
+    <h3> Product quantity : {{quantity}}</h3>
+    <h3> Produt Price : {{price |currency:'INR' }}</h3>
+    <h3> Manufacture date :{{mfd|date :'shortDate'}}</h3>
+    <h3> Manufacture date 2:{{mfd|date:'shortTime'}}</h3>
+    <h3> Amount is :{{amount}}</h3>
+</div>
+
+
+<div>
+
+    <h2> Product Array Deatils:-</h2>
+
+    <table border="1" align="center">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Date of Manufacture</th>
+        </tr>
+
+        <tr *ngFor= "let p of products">
+            <td>{{p.Productname}}</td>
+            <td>{{p.Price}}</td>
+            <td>{{p.quantity}}</td>
+            <td>{{p.mfd|date:'shortDate'}}</td>
+        </tr>
+    </table>
+</div>
